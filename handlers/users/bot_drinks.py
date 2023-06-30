@@ -18,6 +18,7 @@ async def getdrink(message: Message, state: FSMContext):
     drink = message.text
     if drink == '⬅️ Orqaga' or drink == '/start':
         await message.answer('Bosh menu', reply_markup=mainmenubutton())
+         await state.finish()
     elif drink == '🥤 Coca cola':
         image = open('196_coca-cola-05-litra.jpg', 'rb')
 
